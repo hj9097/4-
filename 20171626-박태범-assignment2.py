@@ -1,7 +1,7 @@
 a = int(input("enter a number: "))
 ans = 1
 
-if a >=0:
+if a >= 0:
     while a>=0:
         for i in range(a):
             b=i+1
@@ -9,12 +9,5 @@ if a >=0:
         print(a,"! =",ans)
         ans = 1
         a = int(input('enter a number: '))
-elif a <-1:
-    while a!=-1:
-        for i in range(a):
-            b=i+1
-            ans=ans*b
-        print("error")
-        a=int(input('enter a number: '))
 else:
-    pass
+    print('end')
