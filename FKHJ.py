@@ -1,10 +1,15 @@
-a = 1
-x = int(input("enter a number: "))
+result = 1
+num = int(input("enter a number: "))
 
-while (x != -1):
-	for i in range(x):
-		a = a * (i + 1)
-	print(a)
-	x = int(input("enter a number: "))
-	a = 1
-						
+while (num != -1):
+	if num < -1:
+		print("error")
+		num = int(input("enter a number: "))
+
+	for i in range(num):
+		result = result * (i + 1)
+	print(result)
+	num = int(input("enter a number: "))
+	result = 1
+	
+	
