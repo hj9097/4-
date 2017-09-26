@@ -14,7 +14,7 @@ while True:
   
         m = int(input("두번째 숫자를 입력하세요 : "))
     except:
-        print("error")
+        print("올바를 숫자를 입력하세요")
         continue
 
     if n < 0 or m < 0:     #n이 -1이 아닌 음수 또는 m이 음수인 값을 입력받으면 에러메세지 출력
@@ -25,11 +25,11 @@ while True:
         print("0")
         continue
     if n == 0 and m < 0:  #n이 0이고 m이 음수면 에러메세지 출력
-        print("Error")
+        print("올바를 숫자를 입력하세요")
         continue
 
     if n < m:            #n이 m보다 작으면 에러메세지
-        print("Error")
+        print("올바를 숫자를 입력하세요")
         continue
 
     a = factorial(n)
