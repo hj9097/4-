@@ -5,15 +5,14 @@ def factorial(n):
             ans = ans*i
         return ans
 
-p = 0    #계속 루프를 돌기 위해 임의의 p 지정
 
-while p != -1:
+while True:
     try:
-        n = int(input("Enter n : "))
+        n = int(input("첫번째 숫자를 입력하세요 : "))
         if n == -1:    #n이 -1로 입력받으면 종료
             break
   
-        m = int(input("Enter m : "))
+        m = int(input("두번째 숫자를 입력하세요 : "))
     except:
         print("error")
         continue
@@ -22,14 +21,14 @@ while p != -1:
         print("올바른 값을 입력하세요")
         continue
 
-    if n == 0 and m > 0:  #n이 0이고 m은 0이 아닐때 에러메세지 출력
+    if n == 0 and m > 0:  #n이 0이고 m이 0이면 0출력
         print("0")
         continue
-    if n == 0 and m < 0:
+    if n == 0 and m < 0:  #n이 0이고 m이 음수면 에러메세지 출력
         print("Error")
         continue
 
-    if n < m:
+    if n < m:            #n이 m보다 작으면 에러메세지
         print("Error")
         continue
 
