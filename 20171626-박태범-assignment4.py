@@ -22,7 +22,7 @@ while p != -1:
         print("올바른 값을 입력하세요")
         continue
 
-    if n == 0 and m > 0:  #n이 0이고 m은 0이 아닐때 에러메세지 출력
+    if n == 0 and m > 0: 
         print("0")
         continue
     if n == 0 and m < 0:
