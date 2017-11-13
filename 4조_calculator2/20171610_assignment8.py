@@ -41,10 +41,6 @@ class Calculator(QWidget):
         self.decButton = Button('.', self.buttonClicked)
         self.eqButton = Button('=', self.buttonClicked)
 
-        # Operator Buttons
-
-
-
         # Layout
         mainLayout = QGridLayout()
         mainLayout.setSizeConstraint(QLayout.SetFixedSize)
@@ -106,10 +102,13 @@ class Calculator(QWidget):
         key = button.text()
 
         if key == '=':
+            
             try:
                 result = str(eval(self.display.text()))
+                
             except:
                 result = 'Error!'
+                
             self.display.setText(result)
 
         elif key == 'C':
@@ -119,7 +118,6 @@ class Calculator(QWidget):
         elif key in constantList:
 
             try:
-
                 consList = ['3.141592', '3E+8', '340', '1.5E+8']
 
                 for idx in range(0, 4):
@@ -127,12 +125,11 @@ class Calculator(QWidget):
                     if key in constantList[idx]:
 
                         self.display.setText(self.display.text() + consList[idx])
-
-
-
+                        
             except:
                 "Error"
 
+                
         elif key in functionList:
 
             try:
