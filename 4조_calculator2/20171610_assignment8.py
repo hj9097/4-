@@ -134,7 +134,7 @@ class Calculator(QWidget):
 
             try:
 
-                n = str(self.display.text())
+                n = str(eval(self.display.text()))
 
                 calcList = [calcFunctions.factorial(n),
 
