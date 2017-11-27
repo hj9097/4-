@@ -12,7 +12,7 @@ class Guess:
         #1
         self.secretWord = word
         self.randomword = [x for x  in word]
-        self.currentStatus = ' _ '*len(word)
+        self.currentStatus = '_ '*len(word)
 
         #2
         self.guessedChars = []
@@ -44,7 +44,7 @@ class Guess:
         #2,3
         while character in self.randomword :
             location = self.randomword.index(character)
-            self.currentStatus = self.currentStatus[:location] + character +self.currentStatus[(location+1):]
+            self.currentStatus = self.currentStatus[:location*2] + character +self.currentStatus[(location*2+1):]
             self.randomword[location] = ''
             break
         else :
